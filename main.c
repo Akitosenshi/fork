@@ -23,7 +23,7 @@ int main(int argc, char** argv) {
 		return pid;
 	} else {
 		//child
-		int ret = execvp(argv[1], argv + 2);
+		int ret = execvp(argv[1], argv + 1);
 		for(int counter = 0; counter < argc && (!counter || fprintf(stderr, " ")); ++counter) {
 			fprintf(stderr, "%s", argv[counter]);
 		}
